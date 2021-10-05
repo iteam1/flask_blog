@@ -1,8 +1,26 @@
 from flask import Flask
-from flasgger import Swagger  
+from flasgger import Swagger,swag_from
 
 app = Flask(__name__)
-swagger = Swagger(app)
+
+#define a template Info Object
+template = {
+    "swagger":"2.0",
+    "info":{
+        "title":"FlaskBlog Backend",
+        "description":"FlaskBlog API documments",
+        "contact":{
+            "name": "LocChuong",
+            "url": "http://www.swagger.io/support",
+            "email": "locchuong123@gmail.com"
+        },
+        "termsOfService":"http://me.com/terms",
+        "version":"0.0.1",
+        "schemes":['http','https']
+    }
+}
+swagger = Swagger(app,template = template)
+
 
 @app.route("/")
 @app.route("/home")
