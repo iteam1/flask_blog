@@ -14,7 +14,6 @@ template = {
             "url": "http://www.swagger.io/support",
             "email": "locchuong123@gmail.com"
         },
-        "termsOfService":"http://me.com/terms",
         "version":"0.0.1",
         "schemes":['http','https']
     }
