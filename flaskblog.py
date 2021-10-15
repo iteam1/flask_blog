@@ -20,15 +20,16 @@ template = {
 }
 swagger = Swagger(app,template = template)
 
-
 @app.route("/")
 @app.route("/home")
+@swag_from('./docs/homePage.yml')
 def home():
-    return "<h1>Home Page!</h1>"
+    return "<h1>Home Page!</h1>",200
 
 @app.route("/about")
+@swag_from('./docs/aboutPage.yml')
 def about():
-    return "<h1>About Page</h1>"
+    return "<h1>About Page</h1>",201
 
 if __name__ == "__main__":
     app.run(debug = True)
