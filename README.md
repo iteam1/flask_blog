@@ -1,8 +1,12 @@
 # flask-blog
 ## content
 ### 1/ App and swagger ui
+    pip install flask
+    pip install flasgger
 ### 2/ Template
 ### 3/ Form and User input
+    pip install flask_wtf
+    pip install email_validator
 ## refer to
 ### youtube
 https://www.youtube.com/watch?v=MwZwr5Tvyxo&list=PL-osiE80TeTs4UjLw5MM6OjgkjFeUxCYH
