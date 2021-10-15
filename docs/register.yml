@@ -1,0 +1,9 @@
+Register Page
+This specification is taken from a external YAML file
+---
+parameters:
+  - name: Register Page
+    in: path
+responses:
+  202:
+    description: Register page 

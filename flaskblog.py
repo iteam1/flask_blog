@@ -1,7 +1,9 @@
-from flask import Flask,render_template
+from flask import Flask,render_template,flash, redirect,url_for
 from flasgger import Swagger,swag_from
+from forms import RegistrationForm,LoginForm
 
 app = Flask(__name__)
+app.config['SECRET_KEY'] = 'a745e902cf3b161c90630fc2ae745351'
 
 posts = [
     {
@@ -47,5 +49,26 @@ def home():
 def about():
     return render_template('about.html', title = 'About'),201
 
+@app.route("/register",methods = ['GET','POST'])
+@swag_from('./docs/register.yml')
+def register():
+    form = RegistrationForm() # send form to register page
+    if form.validate_on_submit(): # if receive a form and it valid
+        flash(f'Account created for {form.username.data}!','success') # show a one time message with caterory = success
+        return redirect(url_for('home'))
+    return render_template('register.html',title= 'Register',form = form)
+
+@app.route("/login", methods = ['GET','POST'])
+def login():
+    form = LoginForm()
+    if form.validate_on_submit():
+        if form.email.data == 'admin@blog.com' and form.password.data == '123':
+            flash(f'You have been logged in!','success')
+            return redirect(url_for('home'))
+        else:
+            flash(f'Login Failed, Please check email and password','danger')
+
+
+    return render_template('login.html',title = 'Login', form = form),202
 if __name__ == "__main__":
     app.run(debug = True)
