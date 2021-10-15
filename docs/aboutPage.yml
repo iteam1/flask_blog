@@ -6,4 +6,4 @@ parameters:
     in: path
 responses:
   201:
-    description: About page
+    description: About page html

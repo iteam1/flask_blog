@@ -6,4 +6,4 @@ parameters:
     in: path
 responses:
   200:
-    description: Home page
+    description: Home page 
