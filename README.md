@@ -34,6 +34,10 @@ Query in 'user' table
     User.query.filter_by(username = 'Corey').first()
     User.query.filter_by(username = 'Corey').all()
     User.query.get(1)
+
+Delete all table
+
+    db.drop_all()
     
 ### 5/ Package Structure
 ### 6/ User Authentication
