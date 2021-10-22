@@ -1,0 +1,31 @@
+Register Page
+This specification is taken from a external YAML file
+---
+parameters:
+  - name: username
+    in: formData
+    type: string
+    required: True
+    description: The user's name
+
+  - name: email
+    in: formData
+    type: string
+    required: True
+    description: The user's email
+
+  - name: password
+    in: formData
+    type: string
+    required: True
+    description: The user's password
+
+  - name: confirm_password
+    in: formData
+    type: string
+    required: True
+    description: Must be equal to password
+
+responses:
+  202:
+    description: Redirect to Home page 

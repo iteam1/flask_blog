@@ -1,0 +1,6 @@
+Login Page
+This specification is taken from a external YAML file
+---
+responses:
+  203:
+    description: Show Login page
