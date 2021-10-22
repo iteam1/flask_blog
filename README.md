@@ -27,9 +27,12 @@ Add new row into database
     db.session.add(user_1)
     db.session.commit()
     
-Query all in 'user' table
+Query in 'user' table
 
     User.query.all()
+    User.query.filter_by(username = 'Corey')
+    User.query.filter_by(username = 'Corey').first()
+    User.query.filter_by(username = 'Corey').all()
     
 ### 5/ Package Structure
 ### 6/ User Authentication
