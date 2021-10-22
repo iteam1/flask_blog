@@ -1,13 +1,21 @@
 # flask-blog
+
 ## content
+
 ### 1/ App and swagger ui
+
     pip install flask
     pip install flasgger
+
 ### 2/ Template
+
 ### 3/ Form and User input
+
     pip install flask_wtf
     pip install email_validator
+
 ### 4/ Database
+
     pip install flask_sqlalchemy
 
 Create database
@@ -18,6 +26,10 @@ Add new row into database
 
     db.session.add(user_1)
     db.session.commit()
+    
+Query all in 'user' table
+
+    User.query.all()
     
 ### 5/ Package Structure
 ### 6/ User Authentication
