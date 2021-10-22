@@ -98,7 +98,8 @@ Structure
     pip install flask-bcrypt
     pip install flask-login
     
-Go to the next page after login
+Go to the next page after login:
+
     http://127.0.0.1:5000/login?next=%2Faccount
 
 ## refer to
