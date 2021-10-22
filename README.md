@@ -93,11 +93,13 @@ Structure
             flaskblog.cpython-38.pyc
             forms.cpython-38.pyc
         
-
-            
 ### 6/ User Authentication
+
     pip install flask-bcrypt
     pip install flask-login
+    
+Go to the next page after login
+    http://127.0.0.1:5000/login?next=%2Faccount
 
 ## refer to
 ### youtube
