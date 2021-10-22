@@ -51,35 +51,48 @@ Cmd command
   
 Structure
 
-    Folder PATH listing for volume Disk
     Volume serial number is 324D-658E
     D:.
     |   README.md
     |   requirements.txt
     |   run.py
-    |   structure.txt
+    |   sturcture.txt
     |   
-    \---flaskblog
-        |   forms.py
-        |   models.py
-        |   routes.py
-        |   site.db
-        |   __init__.py
-        |   
-        +---docs
-        |       aboutPage.yml
-        |       homePage.yml
-        |       register.yml
-        |       
-        +---static
-        |       main.css
-        |       
-        \---templates
-                about.html
-                home.html
-                layout.html
-                login.html
-                register.html
+    +---flaskblog
+    |   |   forms.py
+    |   |   models.py
+    |   |   routes.py
+    |   |   site.db
+    |   |   __init__.py
+    |   |   
+    |   +---docs
+    |   |       aboutPage.yml
+    |   |       homePage.yml
+    |   |       loginGet.yml
+    |   |       loginPost.yml
+    |   |       registerGet.yml
+    |   |       registerPost.yml
+    |   |       
+    |   +---static
+    |   |       main.css
+    |   |       
+    |   +---templates
+    |   |       about.html
+    |   |       home.html
+    |   |       layout.html
+    |   |       login.html
+    |   |       register.html
+    |   |       
+    |   \---__pycache__
+    |           forms.cpython-38.pyc
+    |           models.cpython-38.pyc
+    |           routes.cpython-38.pyc
+    |           __init__.cpython-38.pyc
+    |           
+    \---__pycache__
+            flaskblog.cpython-38.pyc
+            forms.cpython-38.pyc
+        
 
             
 ### 6/ User Authentication
