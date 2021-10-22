@@ -1,0 +1,6 @@
+Account Page
+This specification is taken from a external YAML file
+---
+responses:
+  206:
+    description: Account Page

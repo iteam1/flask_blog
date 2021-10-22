@@ -1,0 +1,6 @@
+Logout 
+This specification is taken from a external YAML file
+---
+responses:
+  205:
+    description: Logout user
