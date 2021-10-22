@@ -45,8 +45,12 @@ Delete all table
     
 ### 5/ Package Structure
 
+Cmd command
+
     tree /a /f > stucture.txt 
-    
+  
+Structure
+
     Folder PATH listing for volume Disk
     Volume serial number is 324D-658E
     D:.
