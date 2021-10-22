@@ -97,6 +97,7 @@ Structure
             
 ### 6/ User Authentication
     pip install flask-bcrypt
+    pip install flask-login
 
 ## refer to
 ### youtube
