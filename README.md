@@ -80,6 +80,7 @@ Structure
                 layout.html
                 login.html
                 register.html
+
             
 ### 6/ User Authentication
 
