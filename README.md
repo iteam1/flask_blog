@@ -9,6 +9,8 @@
     pip install email_validator
 ### 4/ Database
     pip install flask_sqlalchemy
+Create database
+    db.create_all()
 ### 5/ Package Structure
 ### 6/ User Authentication
 
