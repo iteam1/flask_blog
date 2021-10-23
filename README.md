@@ -97,6 +97,10 @@ Structure
 
     pip install flask-bcrypt
     pip install flask-login
+
+Go to the next page after login:
+
+    http://127.0.0.1:5000/login?next=%2Faccount
     
 ### 7/ Account's profile update
     
@@ -104,10 +108,6 @@ Resize the avatar image
 
     pip install pillow
     
-Go to the next page after login:
-
-    http://127.0.0.1:5000/login?next=%2Faccount
-
 ## refer to
 ### youtube
 https://www.youtube.com/watch?v=MwZwr5Tvyxo&list=PL-osiE80TeTs4UjLw5MM6OjgkjFeUxCYH
