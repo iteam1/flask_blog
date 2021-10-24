@@ -107,6 +107,10 @@ Go to the next page after login:
 Resize the avatar image
 
     pip install pillow
+
+### 8/CRUD Posts
+
+### 9/Pagination
     
 ## refer to
 ### youtube
