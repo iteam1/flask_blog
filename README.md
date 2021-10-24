@@ -119,6 +119,7 @@ Resize the avatar image
     posts.per_page
     posts = Post.query.paginate(page = 2)
     posts = Post.query.paginate(per_page = 4)
+    posts.total
     
 ## refer to
 ### youtube
