@@ -112,8 +112,12 @@ Resize the avatar image
 
 ### 9/Pagination
 
-    posts = Posts.query.paginate()
+    posts = Post.query.paginate()
     dir(posts)
+    posts.items
+    posts.page
+    posts.per_page
+    posts = Post.query.paginate(page = 2)
     
 ## refer to
 ### youtube
