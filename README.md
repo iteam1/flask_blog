@@ -111,6 +111,9 @@ Resize the avatar image
 ### 8/CRUD Posts
 
 ### 9/Pagination
+
+    posts = Posts.query.paginate()
+    dir(posts)
     
 ## refer to
 ### youtube
