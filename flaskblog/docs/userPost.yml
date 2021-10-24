@@ -1,4 +1,4 @@
-Home Page
+User's Post Page
 This specification is taken from a external YAML file
 ---
 parameters:
@@ -7,5 +7,5 @@ parameters:
     description: page number
     type: number
 responses:
-  200:
-    description: Home page 
+  211:
+    description: User's Post page 

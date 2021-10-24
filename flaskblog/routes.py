@@ -29,8 +29,10 @@ swagger = Swagger(app,template = template)
 @app.route("/home")
 @swag_from('./docs/homePage.yml')
 def home():
-    #Get all post
-    posts = Post.query.all()
+    # get all post
+    # posts = Post.query.all()
+    page = request.args.get('page',1,type = int) # find in path  page query, default value = 1
+    posts = Post.query.order_by(Post.date_posted.desc()).paginate(page = page,per_page = 4) # paginate each page 4 posts
     return render_template('home.html', posts = posts),200
 
 @app.route("/about")
@@ -42,13 +44,13 @@ def about():
 @swag_from('./docs/registerGet.yml',methods = ['GET'])
 @swag_from('./docs/registerPost.yml',methods = ['POST'])
 def register():
-    #Check if user is already login
+    # check if user is already login
     if current_user.is_authenticated:
         return redirect(url_for('home'))
     else:
         form = RegistrationForm() # send form to register page
         if form.validate_on_submit(): # if receive a form and it valid
-            hashed_password = bcrypt.generate_password_hash(form.password.data).decode('utf-8') #decode password into a string, not a bytes 
+            hashed_password = bcrypt.generate_password_hash(form.password.data).decode('utf-8') # decode password into a string, not a bytes 
             user = User(username=form.username.data,email=form.email.data,password = hashed_password) # create a user
             db.session.add(user)
             db.session.commit()
@@ -178,4 +180,15 @@ def delete_post(post_id):
     db.session.commit()
     flash(f'Your post have been deleted!','success')
     return redirect(url_for('home'))
+
+# all account's posts
+@app.route("/user/<string:username>")
+@swag_from('./docs/userPost.yml')
+def user_post(username):
+    page = request.args.get('page',1,type = int) # find in path  page query, default value = 1
+    user = User.query.filter_by(username = username).first_or_404() # find ther user base on username, if not return Fasle
+    posts = Post.query.filter_by(author = user)\
+        .order_by(Post.date_posted.desc())\
+        .paginate(page = page,per_page = 4)
+    return render_template('user_posts.html', posts = posts,user = user),211
 
