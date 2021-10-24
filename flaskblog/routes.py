@@ -21,7 +21,6 @@ posts = [
         "content": 'Second post content',
         "date_posted": 'April 21, 2018' 
     }
-
 ]
 
 #define a template Info Object
