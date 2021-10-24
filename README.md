@@ -112,15 +112,45 @@ Resize the avatar image
 
 ### 9/Pagination
 
+Query posts by pagination
+
     posts = Post.query.paginate()
+
+Show the elements in posts object
+
     dir(posts)
+
+Show post in posts object
+
     posts.items
+
+Current page in posts object created by pagination
+
     posts.page
+    
+The page number in each page    
+    
     posts.per_page
+    
+Show the posts in page 2 
+    
     posts = Post.query.paginate(page = 2)
+    
+Show the posts in first page with 4 posts each page
+
     posts = Post.query.paginate(per_page = 4)
+    
+Total post
+
     posts.total
     
+Show the iteration of page you can access at your current page
+    
+    posts = Post.query.paginate(page = 2)
+    
+    for iter in posts.iter_pages:
+      print(iter)
+      
 ## refer to
 ### youtube
 https://www.youtube.com/watch?v=MwZwr5Tvyxo&list=PL-osiE80TeTs4UjLw5MM6OjgkjFeUxCYH
