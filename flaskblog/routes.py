@@ -1,27 +1,12 @@
-from flask import render_template,flash, redirect,url_for,request
+from flask import render_template,flash, redirect,url_for,request,abort
 from flaskblog import app,db,bcrypt 
-from flaskblog.forms import RegistrationForm,LoginForm,UpdateAccountForm
+from flaskblog.forms import RegistrationForm,LoginForm,UpdateAccountForm,PostForm
 from flaskblog.models import User,Post
 from flasgger import Swagger,swag_from
 from flask_login import login_user,current_user,logout_user,login_required
 import secrets # for generate new name of the picture upload
 import os # for generate new name of the picture upload
 from PIL import Image # for generate new name of the picture upload
-
-posts = [
-    {
-        "author": 'Loc Chuong',
-        "title": 'Blog Post 1',
-        "content": 'First post content',
-        "date_posted": 'April 21, 2018' 
-    },
-    {
-        "author": 'Loc Chuong',
-        "title": 'Blog Post 2',
-        "content": 'Second post content',
-        "date_posted": 'April 21, 2018' 
-    }
-]
 
 #define a template Info Object
 template = {
@@ -44,6 +29,8 @@ swagger = Swagger(app,template = template)
 @app.route("/home")
 @swag_from('./docs/homePage.yml')
 def home():
+    #Get all post
+    posts = Post.query.all()
     return render_template('home.html', posts = posts),200
 
 @app.route("/about")
@@ -133,4 +120,62 @@ def account():
         form.email.data = current_user.email
     image_file = url_for('static',filename = 'profile_pics/' + current_user.image_file)
     return render_template('account.html',title = 'Account',image_file = image_file,form = form),206
+
+@app.route("/post/new", methods=['GET', 'POST'])
+@login_required
+@swag_from('./docs/postsNew.yml')
+def new_post():
+    form = PostForm()
+    if form.validate_on_submit():
+        # create a post object
+        post = Post(title = form.title.data, content = form.content.data, author = current_user)
+        # add new record into database table
+        db.session.add(post)
+        db.session.commit()
+        flash(f'Your post has been created','success')
+        return redirect(url_for('home')) 
+    return render_template('create_post.html',title = 'New Post',form = form, legend = 'New Post'),207
+
+@app.route("/post/<int:post_id>")
+@swag_from("./docs/postID.yml")
+def post(post_id):
+    post = Post.query.get_or_404(post_id)
+    if post:
+        return render_template('post.html',title = post.title, post =post),208
+
+@app.route("/post/<int:post_id>/update",methods = ['GET','POST'])
+@login_required 
+@swag_from('./docs/postUpdate.yml')
+def update_post(post_id):
+    # get the post 
+    post = Post.query.get_or_404(post_id)
+    if post.author != current_user:
+        abort(403)
+    form = PostForm()
+    # if you press submit, update your post
+    if form.validate_on_submit():
+        post.title = form.title.data
+        post.content = form.content.data
+        db.session.commit()
+        flash(f'Your post have been update!','success')
+        return redirect(url_for('post',post_id=post.id)) # return to this post's page
+    
+    elif request.method == 'GET':
+        # display content in the form
+        form.title.data = post.title # display title inside form's title 
+        form.content.data = post.content # displat content inside form's content
+
+    return render_template('create_post.html',title = 'Update Post', form = form, legend = 'Update Post'),209
+
+@app.route("/post/<int:post_id>/delete",methods = ['POST'])
+@login_required
+@swag_from('./docs/postDelete.yml') 
+def delete_post(post_id):
+    post = Post.query.get_or_404(post_id)
+    if post.author != current_user:
+        abort(403)
+    db.session.delete(post)
+    db.session.commit()
+    flash(f'Your post have been deleted!','success')
+    return redirect(url_for('home'))
 

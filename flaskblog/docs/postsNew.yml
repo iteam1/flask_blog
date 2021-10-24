@@ -1,0 +1,6 @@
+New Post Page
+This specification is taken from a external YAML file
+---
+responses:
+  207:
+    description: Create, Update, Delete a Post

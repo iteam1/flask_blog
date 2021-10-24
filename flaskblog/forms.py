@@ -1,6 +1,6 @@
 from flask_wtf import FlaskForm
 from flask_wtf.file import FileField,FileAllowed # filefield for upload file, file allowed for avlidate file
-from wtforms import StringField, PasswordField,BooleanField,SubmitField
+from wtforms import StringField, PasswordField,BooleanField,SubmitField,TextAreaField
 from wtforms.validators import DataRequired, Length, Email,EqualTo,ValidationError
 from flaskblog.models import User
 from flask_login import current_user # for account udate class
@@ -14,7 +14,7 @@ class RegistrationForm(FlaskForm):
     confirm_password = PasswordField('Confirm Password',validators = [DataRequired(),EqualTo('password')])
     submit = SubmitField('Sign Up')
 
-    #function to validate username
+    # function to validate username
     def validate_username(self,username):
         user = User.query.filter_by(username = username.data).first()
         if user: # if there is any user
@@ -38,7 +38,7 @@ class UpdateAccountForm(FlaskForm):
     picture = FileField('Update Profile Picture', validators=[FileAllowed(['jpg', 'png'])])
     submit = SubmitField('Update')
 
-    #function to validate username
+    # function to validate username
     def validate_username(self,username):
         if username.data != current_user.username: # if there is change in username
             user = User.query.filter_by(username = username.data).first()
@@ -50,3 +50,9 @@ class UpdateAccountForm(FlaskForm):
             user = User.query.filter_by(email = email.data).first()
             if user:
                 raise ValidationError(f'The email {email.data} is already taken, Please try another!')
+
+# create a form for post
+class PostForm(FlaskForm):
+    title = StringField('Title',validators = [DataRequired()])
+    content = TextAreaField('Content', validators = [DataRequired()])
+    submit = SubmitField('Update')
