@@ -151,6 +151,10 @@ Show the iteration of page you can access at your current page
     for iter in posts.iter_pages:
       print(iter)
       
+ Pagition by oder
+ 
+    posts = Post.query.order_by(Post.date_posted.desc()).paginate(page = page,per_page = 4)
+      
 ## refer to
 ### youtube
 https://www.youtube.com/watch?v=MwZwr5Tvyxo&list=PL-osiE80TeTs4UjLw5MM6OjgkjFeUxCYH
