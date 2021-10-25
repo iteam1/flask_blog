@@ -108,9 +108,9 @@ Resize the avatar image
 
     pip install pillow
 
-### 8/CRUD Posts
+### 8/ CRUD Posts
 
-### 9/Pagination
+### 9/ Pagination
 
 Query posts by pagination
 
