@@ -1,0 +1,6 @@
+Request for reset Password Page
+This specification is taken from a external YAML file
+---
+responses:
+  212:
+    description: contain a request form for reset password

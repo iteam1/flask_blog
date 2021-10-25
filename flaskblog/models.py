@@ -1,6 +1,7 @@
 from datetime import datetime
-from flaskblog import db, login_manager
+from flaskblog import db, login_manager,app
 from flask_login import UserMixin
+from itsdangerous import TimedJSONWebSignatureSerializer as Serializer # extension lib for generate token to reset account
 
 # create a function to get the user by the id
 @login_manager.user_loader
@@ -15,6 +16,19 @@ class User(db.Model,UserMixin):
     image_file = db.Column(db.String(20),nullable = False,default = 'default.jpg')
     password = db.Column(db.String(60),nullable = True)
     posts = db.relationship('Post',backref ='author',lazy = True)
+
+    def get_reset_token(self,expires_sec = 1800): # create a function for generate token for reset password
+        s = Serializer(app.config['SECRET_KEY'],expires_sec) # create a object generate token follow your app's secret key
+        return s.dumps({'user_id':self.id}).decode('utf-8') # return the token follow user id
+
+    @staticmethod # decorate this function is a static method (not expect self parameter as an argument,accept token as argument)
+    def verify_reset_token(token): # this function for verify the token received from the email
+        s = Serializer(app.config['SECRET_KEY']) # create a object generate token follow your app's secret key without time expires
+        try: # decode the user's id to get the token
+            user_id = s.loads(token)['user_id'] # ex: {'user_id':1}
+        except:
+            return None 
+        return User.query.get(user_id)
 
     def __repr__(self):
         return f"User('{self.username}','{self.email}','{self.image_file}')"
