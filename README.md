@@ -154,6 +154,10 @@ Show the iteration of page you can access at your current page
  Pagition by oder
  
     posts = Post.query.order_by(Post.date_posted.desc()).paginate(page = page,per_page = 4)
+    
+ ### 10/ Email and password reset
+ 
+   ![Capture](https://user-images.githubusercontent.com/73679364/138622404-0c038e36-c10a-4785-b7ed-9262ac0f7bc1.PNG)
       
 ## refer to
 ### youtube
