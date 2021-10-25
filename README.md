@@ -160,7 +160,115 @@ Show the iteration of page you can access at your current page
    ![Capture](https://user-images.githubusercontent.com/73679364/138622404-0c038e36-c10a-4785-b7ed-9262ac0f7bc1.PNG)
    
     pip install flask-mail
-      
+
+### 11/ blueprint
+
+    Folder PATH listing for volume Disk
+    Volume serial number is 324D-658E
+    D:.
+    |   README.md
+    |   requirements.txt
+    |   run.py
+    |   structure.txt
+    |   
+    +---flaskblog
+    |   |   config.py
+    |   |   models.py
+    |   |   site.db
+    |   |   __init__.py
+    |   |   
+    |   +---main
+    |   |   |   forms.py
+    |   |   |   routes.py
+    |   |   |   __init__.py
+    |   |   |   
+    |   |   +---docs
+    |   |   |       aboutPage.yml
+    |   |   |       homePage.yml
+    |   |   |       
+    |   |   \---__pycache__
+    |   |           routes.cpython-38.pyc
+    |   |           __init__.cpython-38.pyc
+    |   |           
+    |   +---posts
+    |   |   |   forms.py
+    |   |   |   routes.py
+    |   |   |   __init__.py
+    |   |   |   
+    |   |   +---docs
+    |   |   |       postDelete.yml
+    |   |   |       postID.yml
+    |   |   |       postsNew.yml
+    |   |   |       postUpdate.yml
+    |   |   |       
+    |   |   \---__pycache__
+    |   |           forms.cpython-38.pyc
+    |   |           routes.cpython-38.pyc
+    |   |           __init__.cpython-38.pyc
+    |   |           
+    |   +---static
+    |   |   |   main.css
+    |   |   |   
+    |   |   \---profile_pics
+    |   |           02cf61d77a003a6a.png
+    |   |           117596b3e34acfab.jpg
+    |   |           249681dc57704068.png
+    |   |           dad3c0f7b846c32d.png
+    |   |           default.jpg
+    |   |           
+    |   +---templates
+    |   |   |   about.html
+    |   |   |   account.html
+    |   |   |   create_post.html
+    |   |   |   home.html
+    |   |   |   layout.html
+    |   |   |   login.html
+    |   |   |   post.html
+    |   |   |   register.html
+    |   |   |   reset_password.html
+    |   |   |   reset_request.html
+    |   |   |   user_posts.html
+    |   |   |   
+    |   |   \---includes
+    |   |           delete_modal.html
+    |   |           
+    |   +---users
+    |   |   |   forms.py
+    |   |   |   routes.py
+    |   |   |   utils.py
+    |   |   |   __init__.py
+    |   |   |   
+    |   |   +---docs
+    |   |   |       account.yml
+    |   |   |       loginGet.yml
+    |   |   |       loginPost.yml
+    |   |   |       logout.yml
+    |   |   |       registerGet.yml
+    |   |   |       registerPost.yml
+    |   |   |       resetPassword.yml
+    |   |   |       resetRequest.yml
+    |   |   |       userPost.yml
+    |   |   |       
+    |   |   \---__pycache__
+    |   |           forms.cpython-38.pyc
+    |   |           routes.cpython-38.pyc
+    |   |           utils.cpython-38.pyc
+    |   |           __init__.cpython-38.pyc
+    |   |           
+    |   \---__pycache__
+    |           config.cpython-38.pyc
+    |           forms.cpython-38.pyc
+    |           models.cpython-38.pyc
+    |           routes.cpython-38.pyc
+    |           __init__.cpython-38.pyc
+    |           
+    +---snippets
+    |       blueprint_imports.txt
+    |       
+    \---__pycache__
+            flaskblog.cpython-38.pyc
+            forms.cpython-38.pyc
+  
 ## refer to
 ### youtube
 https://www.youtube.com/watch?v=MwZwr5Tvyxo&list=PL-osiE80TeTs4UjLw5MM6OjgkjFeUxCYH
