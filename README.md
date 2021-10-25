@@ -158,6 +158,8 @@ Show the iteration of page you can access at your current page
  ### 10/ Email and password reset
  
    ![Capture](https://user-images.githubusercontent.com/73679364/138622404-0c038e36-c10a-4785-b7ed-9262ac0f7bc1.PNG)
+   
+    pip install flask-mail
       
 ## refer to
 ### youtube
