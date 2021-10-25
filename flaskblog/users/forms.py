@@ -1,10 +1,9 @@
 from flask_wtf import FlaskForm
-from flask_wtf.file import FileField,FileAllowed # filefield for upload file, file allowed for avlidate file
-from wtforms import StringField, PasswordField,BooleanField,SubmitField,TextAreaField
-from wtforms.validators import DataRequired, Length, Email,EqualTo,ValidationError
+from flask_wtf.file import FileField, FileAllowed
+from wtforms import StringField, PasswordField, SubmitField, BooleanField
+from wtforms.validators import DataRequired, Length, Email, EqualTo, ValidationError
+from flask_login import current_user
 from flaskblog.models import User
-from flask_login import current_user # for account udate class
-
 
 # create a registration form inherited from flask form
 class RegistrationForm(FlaskForm):
@@ -51,12 +50,6 @@ class UpdateAccountForm(FlaskForm):
             if user:
                 raise ValidationError(f'The email {email.data} is already taken, Please try another!')
 
-# create a form for post
-class PostForm(FlaskForm):
-    title = StringField('Title',validators = [DataRequired()])
-    content = TextAreaField('Content', validators = [DataRequired()])
-    submit = SubmitField('Update')
-
 # create a form send request reseting password account
 class RequestResetForm(FlaskForm):
     email = StringField('Email',validators = [DataRequired(),Email()])
@@ -73,5 +66,3 @@ class ResetPasswordForm(FlaskForm):
     confirm_new_password = PasswordField('Confirm Password',
                                             validators = [DataRequired(),EqualTo('password')])
     submit = SubmitField('Reset Password')
-
-
