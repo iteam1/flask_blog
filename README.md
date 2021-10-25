@@ -43,6 +43,35 @@ Delete all table
 
     db.drop_all()
     
+    Folder PATH listing for volume Disk
+    Volume serial number is 324D-658E
+    D:.
+    |   flaskblog.py
+    |   forms.py
+    |   README.md
+    |   requirements.txt
+    |   site.db
+    |   structure.txt
+    |   
+    +---docs
+    |       aboutPage.yml
+    |       homePage.yml
+    |       register.yml
+    |       
+    +---static
+    |       main.css
+    |       
+    +---templates
+    |       about.html
+    |       home.html
+    |       layout.html
+    |       login.html
+    |       register.html
+    |       
+    \---__pycache__
+            flaskblog.cpython-38.pyc
+            forms.cpython-38.pyc
+    
 ### 5/ Package Structure
 
 Cmd command
