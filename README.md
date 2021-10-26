@@ -45,6 +45,9 @@
 
 ![Capture12](https://user-images.githubusercontent.com/73679364/138869118-2b48d894-9437-4850-bad5-44d40a4c01be.PNG)
 
+### api documents
+
+![Capture13](https://user-images.githubusercontent.com/73679364/138869949-f1e7da7e-66d6-4cc3-b476-0357ceee89e3.PNG)
 
 ### 1/ App and swagger ui
 
