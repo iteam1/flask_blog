@@ -315,6 +315,10 @@ https://devcenter.heroku.com/articles/heroku-cli
     https://evening-earth-87743.herokuapp.com/
     
     heroku rename flaskblogfornewone
+    
+    heroku open
+    
+    git push heroku main
 
 https://www.youtube.com/watch?v=6DI_7Zja8Zc
 
