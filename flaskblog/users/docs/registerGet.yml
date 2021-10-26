@@ -1,0 +1,6 @@
+Register Page
+This specification is taken from a external YAML file
+---
+responses:
+  202:
+    description: Show register page

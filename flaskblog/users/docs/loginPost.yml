@@ -1,0 +1,25 @@
+Login Page
+This specification is taken from a external YAML file
+---
+parameters:
+  - name: email
+    in: formData
+    type: string
+    required: True
+    description: user's email
+  
+  - name: password
+    in: formData
+    type: string
+    required: True
+    description: user's password
+
+  - name: remember
+    in: formData
+    type: boolean
+    required: True
+    description: Remember for the next time
+
+responses:
+  203:
+    description: Redirect to Home Page

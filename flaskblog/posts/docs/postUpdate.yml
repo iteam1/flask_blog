@@ -1,0 +1,16 @@
+Update your post
+This specification is taken from a external YAML file
+---
+parameters:
+  - name: post_id
+    in: path
+    type: number
+    description: Id of the post
+
+responses:
+  209:
+    description: Success update post
+  403:
+    description: User is not author
+  404:
+    description: Not found post

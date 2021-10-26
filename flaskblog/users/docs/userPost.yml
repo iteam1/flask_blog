@@ -1,0 +1,11 @@
+User's Post Page
+This specification is taken from a external YAML file
+---
+parameters:
+  - name: page
+    in: query
+    description: page number
+    type: number
+responses:
+  211:
+    description: User's Post page 

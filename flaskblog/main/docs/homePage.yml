@@ -1,0 +1,11 @@
+Home Page
+This specification is taken from a external YAML file
+---
+parameters:
+  - name: page
+    in: query
+    description: page number
+    type: number
+responses:
+  200:
+    description: Home page 

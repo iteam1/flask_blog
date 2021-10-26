@@ -1,0 +1,6 @@
+Search Page
+This specification is taken from a external YAML file
+---
+responses:
+  214:
+    description: Result page

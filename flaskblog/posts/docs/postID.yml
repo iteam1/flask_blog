@@ -1,0 +1,14 @@
+Specific Post
+This specification is taken from a external YAML file
+---
+parameters:
+  - name: post_id
+    in: path
+    type: number
+    description: Id of the post
+
+responses:
+  208:
+    description: Go to specific post
+  404:
+    description: Not found post
