@@ -307,6 +307,14 @@ Show the iteration of page you can access at your current page
 https://devcenter.heroku.com/articles/heroku-cli
 
     $ heroku login
+    
+    Ctrl + C
+    
+    heroku create
+    
+    https://evening-earth-87743.herokuapp.com/
+    
+    heroku rename flaskblogfornewone
 
 https://www.youtube.com/watch?v=6DI_7Zja8Zc
 
