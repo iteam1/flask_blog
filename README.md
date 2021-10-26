@@ -297,7 +297,25 @@ Show the iteration of page you can access at your current page
     \---__pycache__
             flaskblog.cpython-38.pyc
             forms.cpython-38.pyc
-  
+
+### 12/ Error Handle
+
+### 13/ SearchBar
+
+### 14/ Deploy on heroku
+
+https://devcenter.heroku.com/articles/heroku-cli
+
+https://www.youtube.com/watch?v=6DI_7Zja8Zc
+
+### 15/ Custom domain
+
+https://www.youtube.com/watch?v=LUFn-QVcmB8&list=PL-osiE80TeTs4UjLw5MM6OjgkjFeUxCYH&index=14
+
+### 16/ How to enable HTTPS with a free SSL/TLS Certificate using Let's Encrypt
+
+https://www.youtube.com/watch?v=Gdys9qPjuKs&list=PL-osiE80TeTs4UjLw5MM6OjgkjFeUxCYH&index=16
+
 ## refer to
 ### youtube
 https://www.youtube.com/watch?v=MwZwr5Tvyxo&list=PL-osiE80TeTs4UjLw5MM6OjgkjFeUxCYH
