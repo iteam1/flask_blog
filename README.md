@@ -306,6 +306,8 @@ Show the iteration of page you can access at your current page
 
 https://devcenter.heroku.com/articles/heroku-cli
 
+    $ heroku login
+
 https://www.youtube.com/watch?v=6DI_7Zja8Zc
 
 ### 15/ Custom domain
