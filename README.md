@@ -1,51 +1,45 @@
-![version](https://img.shields.io/badge/version-0.1-brightgreen) 
-![priority](https://img.shields.io/badge/priority-normal-lightgrey) 
-![kanban](https://img.shields.io/badge/status-done-yellowgreen)
-
 # flask-blog
 
-## home page
+### home page
 
 ![Capture1](https://user-images.githubusercontent.com/73679364/138867626-324e4455-13d7-4d61-8837-aa0763263655.PNG)
 
-## register
+### register
 
 ![Capture4](https://user-images.githubusercontent.com/73679364/138867966-bfa1af55-dbe8-4820-a5f9-09f613fcb73b.PNG)
 
-## login
+### login
 
 ![Capture5](https://user-images.githubusercontent.com/73679364/138868039-de73f81c-73d7-4a8a-a758-c1eaf801eece.PNG)
 
 
 ![Capture6](https://user-images.githubusercontent.com/73679364/138868188-12c8db9f-bb04-41a4-ba20-5c578d1e2eff.PNG)
 
-## logout
+### logout
 
 ![Capture3](https://user-images.githubusercontent.com/73679364/138868246-5db24ca3-1bc2-4807-a961-622f066db7ce.PNG)
 
-## account 
+### account 
 
 ![Capture8](https://user-images.githubusercontent.com/73679364/138868546-8b2135e6-e5bf-4ea6-8e25-56157046deda.PNG)
 
 ![Capture9](https://user-images.githubusercontent.com/73679364/138868689-d9462b19-f2f7-4c00-b21d-9095a90aa544.PNG)
 
-
-## create new post
+### create new post
 
 ![Capture2](https://user-images.githubusercontent.com/73679364/138867756-3ab64615-6824-43a8-a88e-1d274db91073.PNG)
 
-## update & delete post
+### update & delete post
 
 ![Capture10](https://user-images.githubusercontent.com/73679364/138868821-99b5b38f-f913-4929-a882-d732da755f62.PNG)
 
-
 ![Capture11](https://user-images.githubusercontent.com/73679364/138868900-b775ce52-16e5-4c4f-8c83-133610f8b139.PNG)
 
-## search tool
+### search tool
 
 ![Capture7](https://user-images.githubusercontent.com/73679364/138868439-75477e42-5375-4ca4-9891-0b4a58955504.PNG)
 
-## pagination
+### pagination
 
 ![Capture12](https://user-images.githubusercontent.com/73679364/138869118-2b48d894-9437-4850-bad5-44d40a4c01be.PNG)
 
@@ -381,9 +375,9 @@ https://www.youtube.com/watch?v=LUFn-QVcmB8&list=PL-osiE80TeTs4UjLw5MM6OjgkjFeUx
 
 https://www.youtube.com/watch?v=Gdys9qPjuKs&list=PL-osiE80TeTs4UjLw5MM6OjgkjFeUxCYH&index=16
 
-## refer to
-### youtube
-https://www.youtube.com/watch?v=MwZwr5Tvyxo&list=PL-osiE80TeTs4UjLw5MM6OjgkjFeUxCYH
-### github
-https://github.com/CoreyMSchafer/code_snippets/tree/master/Python/Flask_Blog
+### refer to
+
+![youtube](https://www.youtube.com/watch?v=MwZwr5Tvyxo&list=PL-osiE80TeTs4UjLw5MM6OjgkjFeUxCYH)
+
+![github](https://github.com/CoreyMSchafer/code_snippets/tree/master/Python/Flask_Blog)
 
