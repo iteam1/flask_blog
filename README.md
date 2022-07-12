@@ -365,15 +365,15 @@ https://devcenter.heroku.com/articles/heroku-cli
     
     git push heroku main
 
-https://www.youtube.com/watch?v=6DI_7Zja8Zc
+[Python Django Tutorial: Deploying Your Application (Option #2)](https://www.youtube.com/watch?v=6DI_7Zja8Zc)
 
 ### 15/ Custom domain
 
-https://www.youtube.com/watch?v=LUFn-QVcmB8&list=PL-osiE80TeTs4UjLw5MM6OjgkjFeUxCYH&index=14
+[Python Flask Tutorial Custom domain](https://www.youtube.com/watch?v=LUFn-QVcmB8&list=PL-osiE80TeTs4UjLw5MM6OjgkjFeUxCYH&index=14)
 
 ### 16/ How to enable HTTPS with a free SSL/TLS Certificate using Let's Encrypt
 
-https://www.youtube.com/watch?v=Gdys9qPjuKs&list=PL-osiE80TeTs4UjLw5MM6OjgkjFeUxCYH&index=16
+[Python Flask Tutorial ow to enable HTTPS with a free SSL/TLS Certificate using Let's Encrypt](https://www.youtube.com/watch?v=Gdys9qPjuKs&list=PL-osiE80TeTs4UjLw5MM6OjgkjFeUxCYH&index=16)
 
 ### refer to
 
